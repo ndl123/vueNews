@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="app">
+			<div class="container">
+			<div class="jumbotron jumbotron-fluid">
+				<div class="container">
+					<h1 class="display-4 text-center">后台</h1>
+					<a href="admin/index.html" class="float-right">进入后台</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<h2>军事</h2>
+				<ul class="list-group">
+  					<li class="list-group-item" v-for="(lis,index) in news" v-if="lis.state && lis.label == '军事'">{{lis.title}}</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h2>国内</h2>
+				<ul class="list-group">
+  					<li class="list-group-item" v-for="(lis,index) in news" v-if="lis.state && lis.label == '国内'">{{lis.title}}</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h2>历史</h2>
+				<ul class="list-group">
+  					<li class="list-group-item" v-for="(lis,index) in news" v-if="lis.state && lis.label == '历史'">{{lis.title}}</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>

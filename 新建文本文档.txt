@@ -1,0 +1,18 @@
+  存 localStorage.setItem("userInfo",JSON.stringify(obj));
+  取 var user = JSON.parse(localStorage.getItem("userInfo"))
+
+var weekArray = ['周一','周二','周三','周四','周五']
+存：localStorage.setItem('weekDay',JSON.stringify(weekArray));
+取： weekArray = JSON.parse(localStorage.getItem('weekDay'));
+
+
+//获取select里选中的值
+var obj = document.getElementByIdx_x(”testSelect”); //定位id
+
+var index = obj.selectedIndex; // 选中索引
+
+var text = obj.options[index].text; // 选中文本
+
+var value = obj.options[index].value; // 选中值
+
+ 
